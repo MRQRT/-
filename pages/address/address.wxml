@@ -1,0 +1,34 @@
+<!-- 引入wxs，并设置module名 -->
+<wxs src="../../filter/common.wxs" module="util" />
+<view class="container">
+  <!--地址管理-->
+  <view  wx:if="{{pageCanRender}}">
+    <view wx:for="{{address}}" class="address">
+      <view class="addressInfo" bindtap="selectThis" data-select="{{index}}">
+        <view class="userName">
+           <text class="name">{{item.contact}}</text>
+           <text class="phone">{{util.formatPhone(item.telephone)}}</text>
+        </view>
+        <view class="userAddress">
+           <text>{{item.address}}</text>
+        </view>
+      </view>
+      <view class="addressOperate">
+        <view class="checkBg">
+           <image src="{{item.isDefault?selected:noSelected}}" class="strong" id="select"  bindtap="makeDefault" data-text="{{index}}"/>
+        </view> 
+        <text class="default">默认地址</text>
+        <view class="operate">
+           <image src="../../images/edit.png" bindtap="editThis" data-index="{{index}}"/>
+           <text class="edit" bindtap="editThis" data-index="{{index}}">编辑</text>
+           <image src="../../images/delete.png" bindtap="deleteThis" data-index="{{index}}"/>
+           <text class="delete" bindtap="deleteThis" data-index="{{index}}">删除</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="addAddress" bindtap="addAddress">
+      <image src="../../images/addAddress.png" />
+      <text>新建地址</text>
+  </button>
+</view>

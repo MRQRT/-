@@ -1,0 +1,113 @@
+.intro{
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding-bottom: 80rpx;
+  box-sizing: border-box;
+}
+.content{
+  background-color: #fff;
+  width: 620rpx;
+  margin-top: 120rpx;
+  position: relative;
+}
+.icon{
+  position: absolute;
+  top: -70rpx;
+  left: 240rpx;
+}
+.title{
+  text-align: center;
+  font-size: 40rpx;
+  color: #333333;
+  margin-top: 140rpx;
+}
+.subTitle{
+  text-align: center;
+  color: #666666;
+  font-size: 26rpx;
+  line-height: 50rpx;
+}
+.list{
+  font-size: 24rpx;
+  color: #999999;
+  padding: 0 60rpx;
+  line-height: 40rpx;
+  margin-top: 40rpx;
+}
+.dashed{
+  width: 620rpx;
+  height: 40rpx;
+  position: relative;
+  margin-top:60rpx;
+}
+.dashed image{
+  width:514rpx;
+  height:6rpx;
+  display: block;
+  margin:0 auto;
+  position: relative;
+  top:17rpx;
+}
+.left_dashed{
+  width:40rpx;
+  height:40rpx;
+  border-radius:50%;
+  background-color: #f5f5f5;
+  position: absolute;
+  left:-20rpx;
+  top: 0rpx;
+}
+.right_dashed{
+  width:40rpx;
+  height:40rpx;
+  border-radius:50%;
+  background-color: #f5f5f5;
+  position: absolute;
+  right: -20rpx;
+  top: 0rpx;
+}
+.stockholder{
+  width: 620rpx;
+  display: flex;
+  justify-content: center;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.stockholder .stockholder_text{
+  font-size: 32rpx;
+}
+.platform{
+  width: 620rpx;
+  display: flex;
+  justify-content: center;
+}
+.border{
+  width: 200rpx;
+  height: 70rpx;
+  padding-top: 14rpx;
+  border: 1px solid #eeeeee;
+  text-align: center;
+  box-sizing: border-box;
+  padding-left: 23rpx;
+}
+.platform image{
+  width: 148rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.so_on{
+  width: 620rpx;
+  display: flex;
+  justify-content: center;
+  height: 20rpx;
+  margin-top: 30rpx;
+}
+.so_on .da{
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #999999;
+  margin-right: 10rpx;
+}

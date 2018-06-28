@@ -1,0 +1,7 @@
+<view class="container sendGift">
+  <!--礼物生成标题-->
+  <text class="sendGiftTitle">你的爱意已包进臻选的黄金礼品</text>
+  <image src="../../images/giftBox.png" class="giftBox" />
+  <button class="sendYou" open-type="share">送给心上人</button>
+  <view class="warmTip">若礼物未领取，将在24小时之后退回至“我的礼物柜”中</view>
+</view>

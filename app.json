@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/giftState/giftState",
+    "pages/giveOther/giveOther",
+    "pages/leaveMessage/leaveMessage", 
+    "pages/addAddress/addAddress",
+    "pages/intro/intro",
+    "pages/myChest/myChest",
+    "pages/giftDetail/giftDetail",
+    "pages/sendGift/sendGift",
+    "pages/goodsDetail/goodsDetail",
+    "pages/address/address",
+    "pages/giftHome/giftHome",
+    "pages/logistics/logistics",
+    "pages/buy/buy"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "爱有金",
+    "navigationBarTextStyle": "black"
+  },
+  "debug": true
+}

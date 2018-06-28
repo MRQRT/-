@@ -1,0 +1,39 @@
+<!--buy.wxml-->
+<view class='buy'>
+  <view class='header'>
+    <image src="{{imgUrl}}"></image>
+    <view class='detail'><text class='detail_button' bindtap="goodsDetail">查看产品详情</text></view>
+  </view>
+  <view class='buy_body'>
+    <view class='liuyan'>
+      <text class='liuyan_left'>再写点小情话</text>
+      <view class='liuyan_right' bindtap="randomCheck">
+        <image src="../../images/cir.png" style="width:25rpx;height:25rpx;margin-right:10rpx;"/>
+        <text class='liuyan_right_text'>随机换</text>
+      </view>
+    </view>
+    <textarea class='liuyan_content' value="{{liuyan}}" bindinput="bindLeaveWordsInput"  maxlength="{{maxLenth}}" />
+    <view class="length">
+      <text>{{wordLength}}</text>
+      <text>/</text>
+      <text>{{maxLenth}}</text>
+    </view>
+  </view>
+  <view class='bottom'>
+    <view class="add_container">
+      <view style="position: relative;width: 160rpx;height: 160rpx;display:block;" wx:if="{{!hidden}}">
+        <video src="{{video_src}}" class='video'></video>
+        <image src="../../images/dele.png" class="dele" bindtap="deleVideo" hidden="{{hidden}}"></image>
+      </view>
+      <view style="position: relative;width: 160rpx;height: 160rpx;display:block;" wx:if="{{!hidden2}}">
+        <image src="{{img_src}}" class="img"></image>
+        <image src="../../images/dele.png" class="dele" bindtap="deleImage" hidden="{{hidden2}}"></image>
+      </view>
+      <view wx:if="{{!hidden3}}" bindtap="modal" class='addimg_video'><image src="../../images/add.png" style="width:25rpx;height:25rpx;float:left;margin-top:25rpx;margin-left:20rpx;"></image>添加图片或视频</view>
+      <!--进度条-->
+      <progress percent="{{percent}}"   active  active-mode="forwards" wx:if="{{hidden3 && !proHidden}}" stroke-width='4' activeColor="#000000" style="width:160rpx;"/>
+    </view>
+  </view>
+  <!--转赠按钮-->
+  <view class="giveOther" bindtap="sendToSb">转赠</view>
+</view>

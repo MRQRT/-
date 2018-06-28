@@ -1,0 +1,110 @@
+<!-- 引入wxs，并设置module名 -->
+<wxs src="../../filter/common.wxs" module="util" />
+<view class='chest'>
+    <view class="chest_nav">
+        <view data-num="1" class="{{_num==1?'cur bigAnimate':'smallAnimate'}}" bindtap="menuClick">持有中</view>
+        <view data-num="2" class="{{_num==2?'cur bigAnimate':'smallAnimate'}}" bindtap="menuClick">已送出</view>
+        <view data-num="3" class="{{_num==3?'cur bigAnimate':'smallAnimate'}}" bindtap="menuClick">已变现</view>
+        <view data-num="4" class="{{_num==4?'cur bigAnimate':'smallAnimate'}}" bindtap="menuClick">已提货</view>
+    </view>
+    <!--持有中-->
+    <view class='list list_1' hidden="{{list_1}}">
+        <!--不是空页面-->
+        <block wx:for="{{hold_list}}" wx:if="{{!holdEmpty}}">
+            <view class="list_item {{index==0?'':'marginTop'}}">
+                <image src="{{util.checkImg(item.middlePictures)}}" bindtap="seeGiftDetail" data-num="{{item.orderId}}"></image>
+                <view class="top" bindtap="seeGiftDetail" data-num="{{item.orderId}}">
+                    <text class="pro_name">{{item.productName}}</text>
+                    <text class="times">{{item.createTime}}</text>
+                </view>
+                <view class='middle' bindtap="seeGiftDetail" data-num="{{item.orderId}}">
+                    <text class="from_or_to" hidden="{{!item.fromNickName}}">来自：{{item.fromNickName}}</text>
+                </view>
+                <view class='bottom'>
+                    <text class="price">￥{{item.buyAmount}}</text>
+                    <text class="leave_message {{item.isMsg?'show':'hide'}}" bindtap="leaveMessage" data-num="{{item.orderId}}" data-nickname="{{item.fromNickName}}" data-imgurl="{{item.productImgUrl}}">查看留言</text>
+                </view>
+            </view>
+        </block>
+        <!--是空页面-->
+        <view class="empty" wx:if="{{holdEmpty}}">
+            <image src="../../images/empty.png"/>
+            <text>空空如也，你不能再这样低调了~</text>
+        </view>
+    </view>
+    <view class='list list_2' hidden="{{list_2}}">
+        <block wx:for="{{send_list}}" wx:if="{{!sendEmpty}}">
+            <view class="list_item {{index==0?'':'marginTop'}}">
+                <image src="{{util.checkImg(item.middlePictures)}}" bindtap="seeGiftDetail" data-num="{{item.orderId}}"></image>
+                <view class="top" bindtap="seeGiftDetail" data-num="{{item.orderId}}">
+                    <text class="pro_name">{{item.productName}}</text>
+                    <text class="times">{{item.createTime}}</text>
+                </view>
+                <view class='middle' bindtap="seeGiftDetail" data-num="{{item.orderId}}">
+                    <text class="from_or_to" hidden="{{!item.toNickName}}">赠送：{{item.toNickName}}</text>
+                    <text class="state">{{item.orderStatus==3?'送出待接收':(item.orderStatus==5?'送出成功':'')}}</text>
+                </view>
+                <view class='bottom'>
+                    <text class="price">￥{{item.buyAmount}}</text>
+                    <text class="leave_message {{item.isMsg==1?'show':'hide2'}}" bindtap="leaveMessage" data-num="{{item.orderId}}" data-nickname="{{item.toNickName}}" data-imgurl="{{item.productImgUrl}}">查看留言</text>
+                </view>
+            </view>
+        </block>
+        <!--是空页面-->
+        <view class="empty" wx:if="{{sendEmpty}}">
+            <image src="../../images/empty.png"/>
+            <text>空空如也，你不能再这样低调了~</text>
+        </view>
+    </view>
+    <view class='list list_3' hidden="{{list_3}}">
+        <block wx:for="{{hasWi_list}}" wx:if="{{!haswiEmpty}}">
+            <view class="list_item {{index==0?'':'marginTop'}}">
+                <image src="{{util.checkImg(item.middlePictures)}}" bindtap="seeGiftDetail" data-num="{{item.orderId}}"></image>
+                <view class="top" bindtap="seeGiftDetail" data-num="{{item.orderId}}">
+                    <text class="pro_name">{{item.productName}}</text>
+                    <text class="times">{{item.createTime}}</text>
+                </view>
+                <view class='middle' bindtap="seeGiftDetail" data-num="{{item.orderId}}">
+                    <text class="from_or_to" hidden="{{!item.fromNickName}}">来自：{{item.fromNickName}}</text>
+                    <text class="state">{{item.orderStatus==7?'待处理':(item.orderStatus==8?'变现成功':(item.orderStatus==9?'变现失败':''))}}</text>
+                </view>
+                <view class='bottom'>
+                    <text class="price">￥{{item.buyAmount}}</text>
+                    <text class="leave_message {{item.isMsg==1?'show':'hide2'}}" bindtap="leaveMessage" data-num="{{item.orderId}}" data-nickname="{{item.fromNickName}}" data-imgurl="{{item.productImgUrl}}">查看留言</text>
+                </view>
+            </view>
+        </block>
+        <!--是空页面-->
+        <view class="empty" wx:if="{{haswiEmpty}}">
+            <image src="../../images/empty.png"/>
+            <text>空空如也，你不能再这样低调了~</text>
+        </view>
+    </view>
+    <view class='list list_4' hidden="{{list_4}}">
+        <block wx:for="{{haspick_list}}" wx:if="{{!haspickEmpty}}">
+            <view class="list_item {{index==0?'':'marginTop'}}">
+                <image src="{{util.checkImg(item.middlePictures)}}" bindtap="seeGiftDetail" data-num="{{item.orderId}}"></image>
+                <view class="top" bindtap="seeGiftDetail" data-num="{{item.orderId}}">
+                    <text class="pro_name">{{item.productName}}</text>
+                    <text class="times">{{item.createTime}}</text>
+                </view>
+                <view class='middle' bindtap="seeGiftDetail" data-num="{{item.orderId}}">
+                    <text class="from_or_to" hidden="{{!item.fromNickName}}">来自：{{item.fromNickName}}</text>
+                    <text class="state {{item.orderStatus>=10?'show':'hide'}}">{{item.orderStatus==10?'提货待处理':(item.orderStatus==11?'物流中':(item.orderStatus==12?'已收货':''))}}</text>
+                </view>
+                <view class='bottom'>
+                    <text class="price">￥{{item.buyAmount}}</text>
+                    <text class="leave_message {{item.isMsg==1?'show':'hide2'}}" bindtap="leaveMessage" data-num="{{item.orderId}}" data-nickname="{{item.fromNickName}}" data-imgurl="{{item.productImgUrl}}">查看留言</text>
+                    <text class="logistic {{item.orderStatus==11||item.orderStatus==12?'show':'hide2'}}" bindtap="logistics" data-num="{{item.orderId}}">物流信息</text>
+                    <text class="confirm {{item.orderStatus==11?'show':'hide2'}}" bindtap="confirms" data-num="{{item.orderId}}">确认收货</text>
+                </view>
+            </view>
+        </block>
+        <!--是空页面-->
+        <view class="empty" wx:if="{{haspickEmpty}}">
+            <image src="../../images/empty.png"/>
+            <text>空空如也，你不能再这样低调了~</text>
+        </view>
+    </view>
+    <view class='button' bindtap="sendAgain" wx:if="{{!list_1 && !holdEmpty || !list_2 && !sendEmpty || !list_3 && !haswiEmpty || !list_4 && !haspickEmpty}}">我也送</view>
+</view>

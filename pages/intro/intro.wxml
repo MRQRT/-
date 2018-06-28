@@ -1,0 +1,32 @@
+<view class='intro'>
+  <view class='content'>
+    <view class='icon'><image src="../../images/100.png" style="width:140rpx;height:140rpx;"></image></view>
+    <view class='title'>定制你的专属告白心意</view>
+    <view class='subTitle'>求婚 表白 生日 纪念日礼品服务</view>
+    <view class='list'><text>1.选择一段情话，为心爱的人，发起一个特殊的情感告白场景。</text></view>
+    <view class='list'><text>2.写上自己想说的，照片，视频形式均可，附上买入的真金，发给心上人。</text></view>
+    <view class='list'><text>3.告白对象收到真金礼品之后，可提取、变现。</text></view>
+    <view class='dashed'>
+        <view class="left_dashed"></view>
+        <view class="right_dashed"></view>
+        <image src="../../images/dotted.png"/>
+    </view>
+    <view class='stockholder'><text class='stockholder_text'>爱有金股东</text></view>
+    <view class='platform'>
+        <view class="border" style="margin-right: 40rpx;">
+            <image src="../../images/platform1.png" mode=""></image>
+        </view>
+        <view class="border">
+            <image src="../../images/platform3.png"></image>
+        </view>
+    </view>
+        <view class='so_on'>
+            <view class='da'></view>
+            <view class='da'></view>
+            <view class='da'></view>
+            <view class='da'></view>
+            <view class='da'></view>
+            <view class='da'></view>
+        </view>
+  </view>
+</view>

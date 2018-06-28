@@ -1,0 +1,24 @@
+<!--pages/leaveMessage/leaveMessage.wxml-->
+<view class='leaveMessage'>
+  <text class='title'>爱的留言</text>
+  <view class="outerBox">
+  <view class='content'>
+  	<view class='incontent'>
+       <image src="{{largePictures}}"/>
+       <view style="height:28rpx;padding-bottom:10rpx;line-height:28rpx;"><text class='sombody'>{{nick_name}}</text><text class='say'>悄悄对你说：</text></view>
+       <textarea class='leave_message' value="{{leave_message}}" maxlength="{{maxLenth}}" disabled/>
+    </view>
+    <view class='dashed'>
+    	<view class="left_dashed"></view>
+    	<view class="right_dashed"></view>
+    	<image src="../../images/dotted.png"/>
+    </view>
+    <view wx:if="{{imageUrl || videoUrl}}">
+       <text style="color: #666666;font-size: 24rpx;width:620rpx;display:block;height:60rpx;">小小的惊喜在这里</text>
+       <image class='leaveImage' src="{{imageUrl}}" bindtap="previewPic" data-src="{{imageUrl}}" wx:if="{{imageUrl}}"/>
+       <video class='video' src="{{tempPath}}" wx:if="{{videoUrl}}"></video>
+       <progress percent="{{percent}}"   active  active-mode="forwards" wx:if="{{videoUrl && !proHidden}}" stroke-width='4' activeColor="#000000" style="width:200rpx;margin:0 auto;"/>
+    </view>
+  </view>
+</view>
+</view>

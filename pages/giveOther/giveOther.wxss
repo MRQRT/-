@@ -1,0 +1,138 @@
+.buy{
+  background-color: #efefef;
+  height: 100vh;
+}
+.header{
+  height: 548rpx;
+  position: relative;
+  text-align: center;
+  background-color: #efefef;
+}
+.header image{
+  width: 690rpx;
+  height: 518rpx;
+  margin-top: 30rpx;
+}
+.detail{
+  position: absolute;
+  width: 750rpx;
+  bottom: 35rpx;
+  text-align: center;
+}
+.detail .detail_button{
+  display:inline-block;
+  font-size:22rpx;
+  width:250rpx;
+  height:65rpx;
+  line-height:65rpx;
+  text-align:center;
+  background-color:#ebeceb;
+  border-radius:32.5rpx;
+  color:#333333;
+}
+.buy_body{
+  width: 690rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+  margin:0 auto;
+  position: relative;
+}
+.buy_body .liuyan{
+  display: block;
+  width: 690rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+  background-color: #fff;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  margin:0 auto;
+}
+.liuyan .liuyan_left{
+  display: inline-block;
+  color: #999999;
+  float: left;
+  line-height: 95rpx; 
+}
+.liuyan .liuyan_right{
+  display: inline-block;
+  color: #c09c60;
+  width: 115rpx;
+  line-height: 95rpx;
+  float: right;
+}
+.liuyan .liuyan_right image{
+  vertical-align: middle;
+}
+.buy_body .liuyan_content{
+  font-size: 32rpx;
+  color: #333333;
+  height: 200rpx;
+  width: 612rpx;
+  background-color: #f8f8f8;
+  padding-left: 20rpx;
+  text-align: left;
+  background-color: #fff;
+  margin:0 auto;
+  background-color: #F8F8F8;
+  display: block;
+  padding-top:12rpx;
+  padding-bottom:6rpx;
+  box-sizing:content-box;
+}
+.bottom{
+  width: 690rpx;
+  background-color: #fff;
+  height: 300rpx;
+  margin-left: 30rpx;
+}
+.add_container{
+  padding-left: 30rpx;
+  padding-top: 30rpx;
+}
+.addimg_video{
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 25rpx;
+  text-align: right;
+  padding-right: 30rpx;
+  width: 220rpx;
+  border-radius: 0rpx;
+  display: inline-block;
+  border: 1px solid #efefef;
+  margin-top: 120rpx;
+  float: left;
+}
+.video{
+  width: 160rpx;
+  height: 160rpx;
+}
+.img{
+  width: 160rpx;
+  height: 160rpx;
+  border: 1px solid #efefef;
+}
+.dele{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: -12rpx;
+  right: -12rpx;
+}
+.giveOther{
+  width:100%;
+  height:100rpx;
+  background-color: #000000;
+  font-size:32rpx;
+  color:#fff;
+  text-align: center;
+  line-height:100rpx;
+  position: fixed;
+  bottom:0;
+}
+.length{
+   position: absolute;
+   right:40rpx;
+   bottom:10rpx;
+   font-size:28rpx;
+}

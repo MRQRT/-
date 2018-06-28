@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+    <view class='title'>{{title}}</view>
+    <view class='desc'>定制你的专属告白心意</view> 
+    <swiper interval="{{interval}}" duration="{{duration}}" class='swiper' bindchange="changeEvent" style="height:{{imageHeight+30}}rpx;margin-top:{{marginTops}}rpx" next-margin="45rpx" previous-margin="45rpx" autoplay="{{autoplay}}">
+        <block wx:for="{{list}}">
+            <swiper-item class="swiper_item" style="height:{{imageHeight+30}}rpx;position: relative;width:{{imageWidth}}rpx;">
+                <image src="{{item.thumbPictures}}" class="slide-image" style="height:{{imageHeight}}rpx;" mode="aspectFill"/>
+                <view class='send' style="bottom:{{btnBottom}}rpx;">
+                   <text class='send_text' bindtap="sendGift" id="{{item.id}}">我要告白</text>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class='myChest' bindtap="to_myChest">我的礼物柜</view>
+    <view  bindtap="learnAbout" class="under">
+        <text class='liaojie'>了解爱有金</text>
+    </view>
+</view>
+

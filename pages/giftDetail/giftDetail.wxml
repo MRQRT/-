@@ -1,0 +1,45 @@
+<!--pages/girtDetail/giftDetail.wxml-->
+<view class='giftDetail'>
+  <view class='photo_content'>
+    <image src="{{largePictures}}" class='photo'></image>
+    <image src="{{giftStatus==1?'../../images/giftStatus_1.png':(giftStatus==2?'../../images/giftStatus_2.png':(giftStatus==3?'../../images/giftStatus_3.png':(giftStatus==4?'../../images/giftStatus_4.png':'')))}}" class='giftStatus'></image>
+    <!-- <text class='gift_name'>{{productName}}</text> -->
+    <text class="gift_detail" bindtap="seeDetail" data-num="{{productId}}">查看产品详情</text>
+  </view>
+  <view class='from_somebody'>
+    <image class='avatar' src="{{fromAvatar}}"></image>
+    <text class='nick_name'>{{nick_name}}</text>
+    <text class='leave_message'>{{leave_message}}</text>
+  </view>
+  <view class='video_images'>
+    <video wx:if="{{videoUrl}}" src="{{tempPath}}"></video>
+    <image wx:if="{{imageUrl}}" src="{{imageUrl}}" bindtap="previewPic" data-src="{{imageUrl}}"></image>
+    <progress percent="{{percent}}"   active  active-mode="forwards" wx:if="{{videoUrl && !proHidden}}" stroke-width='4' activeColor="#000000"/>
+  </view>
+  <view class='footer_nav'>
+    <view class="func {{giftStatus==1?show:'hidden'}}" bindtap="withd">
+      <image src="../../images/withdraw.png"></image>
+      <text>{{withdraw}}</text>
+    </view>
+    <view class="func {{giftStatus==1?'show':'hidden'}}" bindtap="give">
+      <image src="../../images/pick.png"></image>
+      <text>{{pick}}</text>
+    </view>
+    <view class="func {{giftStatus==1?'show':'hidden'}}" bindtap="sendToOne" data-num="{{orderId}}">
+      <image src="../../images/give.png"></image>
+      <text>{{give}}</text>
+    </view>
+    <view class='again' bindtap="senAgain">我也送</view>
+  </view>
+  <view class='modal' hidden="{{hidden}}">
+  </view>
+  <view class="model_content" hidden="{{hidden}}">
+    <form bindsubmit="confirm" report-submit="true" name="sepr">
+      <view class='sellprice' style="color:#c39e61;font-size:45rpx;line-height:100rpx;text-align: center;font-weight:bold;" name="sepr">{{sellAmount}}</view>
+      <text class="sell_text" style="text-align: left;border: none;"> 礼物卖出后，现金直接存入微信零钱</text>
+      <text class="sell_text" style="text-align: left;padding-bottom: 25rpx;">变现服务费为商品原价的20%</text>
+      <text class="cancel" bindtap="cancel">取消</text>
+      <button class="confirm" formType="submit">卖出</button>
+    </form>
+  </view>
+</view>

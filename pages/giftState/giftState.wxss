@@ -1,0 +1,291 @@
+/**finishSendGift.wxss**/
+.container{
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box;
+  min-height:100vh;
+  width:100%;
+  background-color: #FFFFFF;
+}
+/*礼物状态我*/
+.gift .giftInfo{
+  box-sizing: border-box;
+  padding-top:108rpx;
+  text-align: center;
+  width:100%;
+}
+.giftInfo .state{
+  font-size:36rpx;
+  color:#666666;
+  display: block;
+}
+.giftInfo .giftImage{
+  width:750rpx;
+  height:500rpx;
+  display: block;
+}
+.giftInfo .giftName{
+  font-size:48rpx;
+  color:#333333;
+  position: relative;
+  top:-62rpx;
+}
+.gift .giftPrice{
+  font-size:34rpx;
+  color:#C09C60;
+  display: block;
+  font-weight:bold;
+}
+.gift .giftPrice .unit{
+  font-size:22rpx;
+  color:#C09C60;
+}
+/*完成按钮*/
+.gift .finishBtn{
+  width:650rpx;
+  height:88rpx;
+  background-color: #000000;
+  color:#fff;
+  font-size:34rpx;
+  text-align: center;
+  line-height:88rpx;
+  border-radius: 4px;
+  margin-top:194rpx;
+}
+.gift .tip{
+  color:#999999;
+  font-size:24rpx;
+  padding-top:30rpx;
+}
+/*对方打开对话框信息*/
+.received .hasReceived{
+  text-align: center;
+  box-sizing: border-box;
+  width: 750rpx;
+  position: relative;
+}
+.received .hasReceived .inImageContent{
+  position: absolute;
+  bottom:0;
+  width:650rpx;
+  left:50%;
+  margin-left:-325rpx;
+  text-align:center;
+}
+.received .receivedImage{
+   width:100%;
+   height:750rpx;
+   display: block;
+}
+.received .receivedName{
+  font-size:48rpx;
+  color:#333333;
+  font-weight:bold;
+}
+/*查看产品详情*/
+.received .viewInfo{
+  width:180rpx;
+  height:40rpx;
+  border:1px solid #c09c60;
+  font-size:22rpx;
+  color:#c09c60;
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 20px;
+  margin:0 auto;
+  margin-top:30rpx;
+}
+/*查看礼物柜*/
+.received .viewBox{
+  font-size:24rpx;
+  padding-top:40rpx;
+  padding-bottom:60rpx;
+  text-align: center;
+  border-bottom:1px solid #EEEEEE;
+  margin:0 auto;
+}
+.received .viewBox .viewBoxT1{
+  color:#999999;
+}
+.received .viewBox .viewBoxT2{
+  color:#c09c60;
+  display: inline-block;
+}
+/*礼物来自于谁*/
+.fromFriend{
+  width:100%;
+  padding-left:50rpx;
+  padding-right:50rpx;
+  box-sizing: border-box;
+}
+.fromFriend .from{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  padding-top:60rpx;
+}
+.fromFriend .headImage{
+  width:70rpx;
+  height:70rpx;
+}
+.fromFriend .from .words{
+  padding-left:20rpx;
+  width:560rpx;
+}
+.fromFriend .from .words text{
+  display: block;
+}
+.fromFriend .from .words .words1{
+  font-size:30rpx;
+  color:#333333;
+  font-weight:bold;
+}
+.outerVideo{
+  padding-top:32rpx;
+}
+.outerVideo .leaveVideo{
+  width:160rpx;
+  height:160rpx;
+  display: block;
+}
+.fromFriend .from .words .words2{
+  font-size:26rpx;
+  color:#666666;
+}
+/*分享朋友圈*/
+.share{
+  padding-top:64rpx;
+  font-size:24rpx;
+  color:#C09C60;
+  padding-bottom:64rpx;
+}
+/*领取弹框*/
+.getGift{
+  width: 750rpx;
+  height: 100vh;
+  background-color: #666666;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 200;
+}
+.getGiftContent{
+  width: 620rpx;
+  height: 800rpx;
+  background-color: #fff;
+  position: relative;
+}
+.getGiftContent:before{
+  content: '';
+  display: inline-block;
+  width: 1rpx;
+  height: 50rpx;
+  background-color: #fff;
+  position: absolute;
+  right: 30rpx;
+  top: -50rpx;
+}
+.close{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: -100rpx;
+  right: 7rpx;
+}
+.sendName{
+  display: block;
+  font-size: 34rpx;
+  color: #333333;
+  margin-top: 80rpx;
+}
+.giftBox{
+  width: 420rpx;
+  height: 300rpx;
+  margin-top: 60rpx;
+}
+.get_button text{
+  display: inline-block;
+  width: 440rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border: 1px solid #c09c60;
+  border-radius: 5rpx;
+  font-size: 34rpx;
+  color: #c09c60;
+  margin-top: 100rpx;
+}
+/*礼物已退回*/
+.giveBavkInfo{
+  font-size:28rpx;
+  color:#999999;
+  text-align: center;
+  padding-top:84rpx;
+  padding-bottom:254rpx;
+}
+.hasReceived .inImageContent.giveB{
+  bottom:74rpx;
+}
+/*模态框*/
+.modal{
+  width: 750rpx;
+  height: 100vh;
+  background-color: #7f7f7f;
+  opacity: .5;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+}
+.model_content{
+  width: 490rpx;
+  min-height: 250rpx;
+  background-color: #fff;
+  z-index: 1010;
+  position: fixed;
+  top: 35vh;
+  left: 130rpx;
+  box-sizing: border;
+}
+.model_content text{
+  display: block;
+  text-align: center;
+}
+.sell_text{
+  color: #333;
+  font-size: 25rpx;
+  line-height: 30rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 1px solid #efefef;
+}
+.cancel{
+  width: 245rpx;
+  display: inline-block;
+  color: #c39e61;
+  font-size: 35rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  float: left;
+  border-right:1px solid #efefef;
+  box-sizing: border-box;
+}
+.confirm{
+  width: 245rpx;
+  display: inline-block;
+  color: #c39e61;
+  font-size: 35rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center; 
+  border: none;
+  float: right;
+  border-radius: none;
+  background-color: #fff;
+}
+.confirm:after{
+  display: none;
+}
+.hidden{
+  visibility: hidden;
+}

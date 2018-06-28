@@ -1,0 +1,77 @@
+<view class="container goods">
+  <!--产品详情图片-->
+  <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{largeImgUrl}}">
+      <swiper-item class="imageItem">
+        <image src="{{item}}" class="slide-image goodsImage"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--产品文字描述-->
+  <view class="detailContent">
+     <image src="{{wenans}}" class="text"/>
+  </view>
+  <!--产品参数-->
+  <view class="goodsParams">
+      <text class="params1">产品参数</text>
+      <text class="params2">PRODUCT PARAMETERS </text>
+      <view class="horizonLine"></view>
+      <image src="{{guiges}}" style="width:640rpx;height:360rpx;"></image>
+      <!--表格-->
+      <!-- <view class="tableIn"> -->
+         <!--第一行-->
+         <!-- <view class="row1"> -->
+            <!--第一列-->
+<!--             <view class="column1">
+               <view class="outerName">
+                  <text class="inTitle">产品:</text>
+                  <text class="inContent">{{goodsDetail.name}}</text>
+               </view>
+               <view>
+                  <text class="inTitle">材质:</text>
+                  <text class="inContent">{{goodsDetail.material}}</text>
+               </view>
+               <view>
+                  <text class="inTitle">总克重:</text>
+                  <text class="inContent">{{goodsDetail.totalWeight}}g</text>
+               </view>
+               <view style="border:none;">
+                  <text class="inTitle">含金量:</text>
+                  <text class="inContent">{{goodsDetail.fineness}}</text>
+               </view>
+            </view> -->
+            <!--第二列-->
+<!--             <view class="column2">
+               <image src="{{goodsDetail.size}}"/>
+            </view>
+         </view> -->
+         <!--第二行-->
+<!--          <view class="row2">
+             <view style="height:50rpx;">
+                  <text class="inTitle">适用对象:</text>
+                  <text class="inContent">{{goodsDetail.fitPer}}</text>
+               </view>
+               <view>
+                  <text class="inTitle">适用时刻:</text>
+                  <text class="inContent">{{goodsDetail.fitTime}}</text>
+               </view>
+         </view> -->
+      <!-- </view> -->
+  </view>
+  <!--保障-->
+  <view class="guarantee">
+     <view class="guaranteeCon">
+        <image src="../../images/ensure1.png"/>
+        <text>国检认证</text>
+     </view>
+     <view class="guaranteeCon">
+         <image src="../../images/ensure2.png"/>
+         <text>正品保障</text>
+     </view>
+     <view class="guaranteeCon" style="margin-right:0;">
+         <image src="../../images/ensure3.png"/>
+         <text>正规发票</text>
+     </view>
+  </view>
+</view>

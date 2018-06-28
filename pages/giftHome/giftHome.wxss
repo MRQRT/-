@@ -1,0 +1,113 @@
+/**礼物到家图片**/
+.container{
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box; 
+  min-height:100vh; 
+  width:100%;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+}
+.giftImage{
+  width:750rpx;
+  height:500rpx;
+  border-bottom:1px solid #E1E1E1;
+  background-color: #fff;
+  text-align:center;
+  padding-top:90rpx;
+  position: relative;
+}
+.giftImage image{
+  width:750rpx;
+  height:500rpx;
+}
+.giftName{
+  font-size:34rpx;
+  color:#333333;
+  position: absolute;
+  bottom:92rpx;
+  left:50%;
+  margin-left:-68rpx;
+}
+/*送货地址*/
+.sendAddress{
+  height:140rpx;
+  background-color:#fff; 
+  width:100%;
+  line-height:140rpx;
+  padding-left:30rpx;
+  box-sizing: border-box;
+  padding-right:35rpx;
+}
+.sendAddress .addressLogo{
+  width:44rpx;
+  height:44rpx;
+  margin-right:20rpx;
+  vertical-align: middle;
+}
+.sendAddress .skip{
+  width:24rpx;
+  height:24rpx;
+  float:right;
+  margin-top:60rpx;
+}
+.sendAddress .noAddress{
+  font-size:26rpx;
+  color:#666666;
+}
+/*有默认地址*/
+.hasDefault{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.hasDefault .hasLogo{
+  width:44rpx;
+  margin-right:20rpx;
+}
+.hasDefault .addressInfo{
+  box-sizing: border-box;
+  padding-top:28rpx;
+}
+.hasDefault .addressInfo .nameNum{
+  font-size:30rpx;
+  color:#333333;
+  height:30rpx;
+  line-height:30rpx;
+  margin-bottom:30rpx;
+}
+.hasDefault .addressInfo .info{
+  font-size:24rpx;
+  color:#333333;
+  height:24rpx;
+  line-height:24rpx;
+}
+.hasDefault .arrow{
+  height:140rpx;
+  position: absolute;
+  right: 35rpx;
+}
+.warmTip{
+  font-size:24rpx;
+  color:#999999;
+  padding-top:30rpx;
+  padding-left:30rpx;
+  padding-right:35rpx;
+  line-height:40rpx;
+}
+/*确认提货*/
+.confirmGet{
+  width:650rpx;
+  height:90rpx;
+  background-color:#000000;
+  border-radius:4px;
+  color:#fff;
+  font-size:34rpx;
+  text-align: center;
+  line-height:90rpx;
+  position: fixed;
+  bottom:200rpx;
+  left:50%;
+  margin-left:-325rpx;
+}

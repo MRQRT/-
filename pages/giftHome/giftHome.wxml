@@ -1,0 +1,37 @@
+<!-- 引入wxs，并设置module名 -->
+<wxs src="../../filter/common.wxs" module="util" />
+<view class="container giftHome">
+  <!--礼物图片-->
+   <view class="giftImage">
+      <image src="{{largePictures}}"/>
+      <!-- <text class="giftName">{{productName}}</text> -->
+   </view> 
+   <!--提货地址(没有地址)-->
+   <view class="sendAddress" wx:if="{{noAddress}}" bindtap="gotoAddAddress">
+       <image src="../../images/address.png" class="addressLogo"/>
+       <text class="noAddress">您的礼物要送到哪里？告诉我我怕迷路!</text>
+       <image src="../../images/skip.png" class="skip"/>
+   </view>
+   <!--提货地址(有默认地址)-->
+   <view class="sendAddress hasDefault" wx:if="{{canRender}}" bindtap="gotoAddress">
+       <view class="hasLogo">
+          <image src="../../images/address.png" class="addressLogo"/>
+       </view>
+       <!--地址具体信息-->
+       <view class="addressInfo">
+           <view class="nameNum">
+               <text style="margin-right:40rpx;">{{address.contact}}</text>
+               <text>{{util.formatPhone(address.telephone)}}</text>
+           </view>
+           <view class="info">
+               <text>{{address.address}}</text>
+           </view>
+       </view>
+       <view class="arrow">
+            <image src="../../images/skip.png" class="skip"/>
+       </view>
+   </view>
+   <view class="warmTip">2月8日后的订单受节日期间物流影响，会存在投递延迟情况，详情咨询客服4008-196-199</view>
+   <!--我要提货-->
+   <view class="confirmGet" bindtap="confirmGet">确认提货</view>
+</view>

@@ -1,0 +1,229 @@
+/* pages/girtDetail/giftDetail.wxss */
+.giftDetail{
+  min-height: 100vh;
+  padding-bottom: 98rpx;
+}
+.giftDetail .gift_desc{
+  font-size: 24rpx;
+  color: #333333;
+  display: block;
+  text-align: center;
+  height: 45rpx;
+  line-height: 45rpx;
+}
+.giftDetail .price{
+  text-align: center;
+  margin-top: 5rpx;
+}
+/*从这儿开始*/
+.photo_content{
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+.photo_content:after{
+  content:"";
+  width:700rpx;
+  display: block;
+  border-bottom:1px solid #eeeeee;
+  position: absolute;
+  bottom: 65rpx;
+  left:25rpx;
+}
+.photo_content .photo{
+  height: 750rpx;
+  width: 750rpx;
+}
+.photo_content .giftStatus{
+  width: 211rpx;
+  height: 117rpx;
+  position: absolute;
+  right: 80rpx;
+  top: 220rpx;
+}
+.gift_name{
+  font-size: 48rpx;
+  display: block;
+  width: 750rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 205rpx;
+}
+.gift_detail{
+  font-size: 22rpx;
+  display: block;
+  width: 180rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 205rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  border: 1px solid #c4a36b;
+  color: #c4a36b;
+  left: 285rpx;
+  bottom: 135rpx;
+}
+.from_somebody{
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 0 50rpx 0 50rpx;
+  overflow: hidden;
+}
+.from_somebody .avatar{
+  width: 70rpx;
+  height: 70rpx;
+  float: left;
+}
+.from_somebody .nick_name{
+  display: inline-block;
+  width: 580rpx;
+  font-size: 30rpx;
+  float: left;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+}
+.from_somebody .leave_message{
+  display: inline-block;
+  box-sizing: border-box;
+  width: 580rpx;
+  font-size: 24rpx;
+  color: #666666;
+  float: left;
+  padding-left: 20rpx;
+}
+.video_images{
+  box-sizing: border-box;
+  padding-left: 140rpx;
+  padding-top: 30rpx;
+}
+.video_images progress{
+  width: 150rpx;
+}
+.video_images video{
+  width: 150rpx;
+  height: 150rpx;
+  z-index: 1;
+  display: block;
+}
+.video_images image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.footer_nav{
+  width: 750rpx;
+  height: 98rpx;
+  box-sizing: border-box;
+  border-top: 1px solid #e1e1e1;
+  position: fixed;
+  bottom: 0;
+  padding-left: 25rpx;
+  background-color: #fff;
+}
+.footer_nav .func{
+  display: inline-block;
+  width: 120rpx;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 10rpx;
+  height: 98rpx;
+}
+.footer_nav .func image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.footer_nav .func text{
+  display: block;
+  font-size: 22rpx;
+  color: #333333;
+  margin-top: 3rpx;
+}
+.footer_nav .again{
+  display: inline-block;
+  width: 180rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: #000000;
+  color: #fff;
+  font-size: 28rpx;
+  border-radius: 4px;
+  float: right;
+  margin-right: 30rpx;
+  margin-top: 20rpx;
+}
+/*模态框*/
+.modal{
+  width: 750rpx;
+  height: 100vh;
+  background-color: #7f7f7f;
+  opacity: .5;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+}
+.model_content{
+  width: 490rpx;
+  min-height: 250rpx;
+  background-color: #fff;
+  z-index: 1010;
+  position: fixed;
+  top: 35vh;
+  left: 130rpx;
+  box-sizing: border;
+}
+.model_content text{
+  display: block;
+  text-align: center;
+}
+.sell_text{
+  color: #333;
+  font-size: 25rpx;
+  line-height: 45rpx;
+  border-bottom: 1px solid #efefef;
+  position: relative;
+  padding-left: 46rpx;
+  text-align: left;
+}
+.sell_text:before{
+  content: '';
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #333333;
+  position: absolute;
+  left: 25rpx;
+  top: 18rpx;
+}
+.cancel{
+  width: 245rpx;
+  display: inline-block;
+  color: #c39e61;
+  font-size: 35rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  float: left;
+  border-right:1px solid #efefef;
+  box-sizing: border-box;
+}
+.confirm{
+  width: 245rpx;
+  display: inline-block;
+  color: #c39e61;
+  font-size: 35rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center; 
+  border: none;
+  float: right;
+  border-radius: none;
+  background-color: #fff;
+}
+.confirm:after{
+  display: none;
+}
+.hidden{
+  visibility: hidden;
+}

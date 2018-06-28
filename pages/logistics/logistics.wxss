@@ -1,0 +1,81 @@
+/* pages/logistics/logistics.wxss */
+.logistics{
+  width: 750rpx;
+  background-color: #f8f8f8;
+}
+.logistics .header{
+  width: 750rpx;
+  height: 210rpx;
+  background-color: #fff;
+}
+.logistics .header image{
+  float: left;
+  width: 130rpx;
+  height: 130rpx;
+  margin: 40rpx 30rpx 0 30rpx;
+  border: 1px solid #f5f5f5;
+}
+.logistics .header .right{
+  margin-top: 40rpx;
+  float: left;
+  width: 530rpx;
+  font-size: 24rpx;
+}
+.logistics .header .right text{
+  display: block;
+  height: 36rpx;
+  line-height: 36rpx;
+}
+.stand{
+  width: 750rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.stand:before{
+  content:'';
+  width: 2rpx; 
+  height: 100%;
+  position: absolute;
+  left: 70rpx;
+  top: 35rpx;
+  background-color: #eeeeee;
+  z-index: 1;
+}
+.stand .every_stand{
+  width: 600rpx;
+  float: right;
+  position: relative;
+  box-sizing: border-box;
+  padding-right:30rpx;
+}
+.border_bottom{
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #eeeeee;
+  margin-top: 23rpx;
+}
+/*物流的小圆圈*/
+.stand .every_stand:before{
+  content:'';
+  width: 18rpx; 
+  height: 18rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: -87rpx;
+  top: 35rpx;
+  background-color: #eeeeee;
+}
+.stand .every_stand_big:before{
+  content:'';
+  width: 20rpx; 
+  height: 20rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: -92rpx;
+  top: 30rpx;
+  background-color: #c09c60;
+  z-index: 2;
+  border: 2px solid #ddc899;
+}

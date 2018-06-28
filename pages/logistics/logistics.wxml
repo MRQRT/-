@@ -1,0 +1,19 @@
+<!--pages/logistics/logistics.wxml-->
+<view class="logistics">
+  <view class="header">
+    <image src="{{path}}"></image>
+    <view class='right'>
+      <view><text style="font-size:28rpx;color:#333333;display:inline;">物流状态</text><text style="display:inline;color:#c09c60;font-size:28rpx;"> {{expressDetail.deliverystatus}}</text></view>
+      <text>承运来源：{{expressDetail.expName}}</text>
+      <text>运单编号：{{expressDetail.number}}</text>
+      <text>官方电话：{{expressDetail.expPhone}}</text>
+    </view>
+  </view>
+  <view class='stand'>
+    <view class="every_stand" wx:for="{{expressDetail.list}}">
+      <text style="font-size:24rpx;display:block;margin-top:20rpx;" class="{{index==0?'every_stand_big':''}}">{{item.status}}</text>
+      <text style="font-size:20rpx;display:block;margin-top:20rpx;">{{item.time}}</text>
+      <text class='border_bottom'></text>
+    </view>
+  </view>
+</view>

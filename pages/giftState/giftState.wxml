@@ -1,0 +1,100 @@
+<!-- 引入wxs，并设置module名 -->
+<wxs src="../../filter/common.wxs" module="util" />
+<!--我打开对话框消息-->
+<view class="getGift" wx:if="{{getGift}}">
+  <view class="getGiftContent">
+    <image src="../../images/close.png" class="close" bindtap="closeWindow"/>
+    <text class="sendName">{{sendName}}</text>
+    <text style="font-size: 30rpx;color: #666666;line-height: 60rpx;display: block;">送你一份心意</text>
+    <image src="../../images/giftBox.png" class="giftBox"/>
+    <view class="get_button"><text bindtap="accept">领取</text></view>
+  </view>
+</view>
+<!--我打开的页面-->
+<view class="container gift" wx:if="{{meIn}}">
+  <!--礼物状态-->
+  <view class="giftInfo">
+     <text class="state">{{orderDetail.statusCode=='3'?'等待对方接收' : (orderDetail.statusCode=='4'?'已退回':'对方已接收')}}</text>
+     <image src="{{util.checkImg(orderDetail.middlePictures)}}" class="giftImage"/>
+     <!-- <text class="giftName">{{orderDetail.productName}}</text> -->
+  </view>
+  <text class="giftPrice">
+      <text class="unit">¥</text>
+      <text>{{orderDetail.buyAmount}}</text>
+  </text>
+  <!--完成按钮-->
+  <view class="finishBtn" bindtap="closeWindow">完成</view>
+  <!--温馨提示-->
+  <text class="tip">若礼物未领取，将在24小时之后退回至“我的礼物柜”中</text>
+</view>
+<!--对方打开对话框消息-->
+<view class="container received" wx:if="{{soIn}}">
+  <!--礼物信息-->
+  <view class="hasReceived">
+     <image src="{{util.checkImg2(orderDetail.middlePictures)}}" class="receivedImage"/>
+     <view class="inImageContent">
+        <!-- <text class="receivedName">{{orderDetail.productName}}</text> -->
+        <!--查看产品详情-->
+        <view class="viewInfo" bindtap="viewDetail">查看产品详情</view>
+        <!--点击查看礼柜-->
+        <view class="viewBox">
+          <text class="viewBoxT1">收到礼品，已存入</text>
+          <text class="viewBoxT2" bindtap="toMychest">我的礼物柜></text>
+        </view>
+     </view>
+  </view>
+  <!--礼物来自于谁-->
+  <view class="fromFriend">
+     <view class="from">
+         <image src="{{orderDetail.fromAvatar}}" class="headImage"/>
+         <view class="words">
+            <text class="words1">{{orderDetail.fromNickName}}</text>
+            <text class="words2">{{message || '我爱你,不是说说而已'}}</text>
+            <!--视频-->
+            <view class="outerVideo" wx:if="{{orderDetail.imageUrl || orderDetail.videoUrl}}">
+              <video src="{{tempPath}}"   controls  class="leaveVideo" wx:if="{{orderDetail.videoUrl}}"></video>
+              <image src="{{orderDetail.imageUrl}}"   class="leaveVideo" wx:if="{{orderDetail.imageUrl}}" bindtap="previewPic" data-src="{{orderDetail.imageUrl}}"/>
+              <progress percent="{{percent}}"   active  active-mode="forwards" wx:if="{{orderDetail.videoUrl && !proHidden}}" stroke-width='4' activeColor="#000000" style="width:160rpx;"/>
+            </view>
+            <!-- 没有视频的占位符 -->
+            <view style="margin-top: 70rpx;" wx:if="{{!orderDetail.imageUrl || !orderDetail.videoUrl}}">
+            </view>
+         </view>
+     </view>
+  </view> 
+  <!--分享或是也要送-->
+  <view class="share">
+      <text class="share1" bindtap="withd" style="margin-right:20rpx;">变现</text>
+      <text class="share1">|</text>
+      <text class="share1" bindtap="meSend" style="margin-left:20rpx;">我也送</text>
+  </view>
+  <!-- 提现弹出框 -->
+  <view class='modal' hidden="{{hidden}}">
+  </view>
+  <view class="model_content" hidden="{{hidden}}">
+    <form bindsubmit="confirm" report-submit="true" name="sepr">
+      <view class='sellprice' style="color:#c39e61;font-size:45rpx;line-height:120rpx;text-align: center;font-weight:bold;" name="sepr">￥{{orderDetail.sellAmount}}</view>
+      <text class="sell_text" style="">礼物卖出后，现金直接存入微信零钱</text>
+      <text class="cancel" bindtap="cancel">取消</text>
+      <button class="confirm" formType="submit">卖出</button>
+    </form>
+  </view>
+</view>
+<!--对方打开对话框消息(已退回)-->
+<view class="container received" wx:if="{{giveBack}}">
+  <!--礼物信息-->
+  <view class="hasReceived">
+     <image src="{{util.checkImg2(orderDetail.middlePictures)}}" class="receivedImage"/>
+     <view class="inImageContent giveB">
+        <!-- <text class="receivedName">{{orderDetail.productName}}</text> -->
+        <!--查看产品详情-->
+        <view class="viewInfo" bindtap="viewDetail">查看产品详情</view>
+     </view>
+  </view>
+  <!--退回信息-->
+  <view class="giveBavkInfo">您24小时未领取,礼物伤心的跑回去了</view>
+  <!--分享或是也要送-->
+  <view class="share" style="padding-top:0;">
+      <text class="share1" bindtap="meSend">我也送</text>
+  </view>
+</view>

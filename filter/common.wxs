@@ -1,0 +1,40 @@
+//目前似乎不支持es6,至少let不支持,不可以引入.js文件，也不可以被.js文件引用,wxs文件能引用wxs文件
+// 通过正则来格式化手机号
+var formatPhone=function(phone){
+  var regExp = getRegExp('^(\d{3})\d{4}(\d{4})$','g');
+  return phone.replace(regExp,'$1****$2')
+}
+
+//通过正则来校验手机号格式是否正确
+var checkPhone = function (phone) {
+  var regExp = getRegExp('1[3-9]\d{9}')
+  return regExp.test(phone)
+}
+
+
+//过滤图片地址2(3:2没有文案)
+
+var checkImg = function	(imgs) {
+	for(var i=0;i<imgs.length;i++){
+		if(imgs[i].sortNo==2){
+			return imgs[i].path
+		}
+	}
+}
+
+//过滤图片地址3(1:1有文案)
+
+var checkImg2 = function (imgs) {
+  for(var i=0;i<imgs.length;i++){
+    if(imgs[i].sortNo==3){
+      return imgs[i].path
+    }
+  }
+}
+
+module.exports = {
+  'formatPhone': formatPhone,
+  'checkPhone': checkPhone,
+  'checkImg': checkImg,
+  'checkImg2': checkImg2
+}
