@@ -23,12 +23,14 @@ Page({
       'cashUse': true,
       'message':'' //留言
     },
+    
   //点击弹框的关闭按钮
-  closeWindow: function(){
-    wx.navigateBack({
-      delta: 0
-    }) 
-  },
+  // closeWindow: function(){
+  //   wx.navigateBack({
+  //     delta: 0
+  //   })
+  // },
+
   //点击我要送跳转商品列表页面
   meSend(){
     wx.navigateTo({

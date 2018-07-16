@@ -23,7 +23,8 @@
       <text>{{orderDetail.buyAmount}}</text>
   </text>
   <!--完成按钮-->
-  <view class="finishBtn" bindtap="closeWindow">完成</view>
+  <!-- <navigator class="finishBtn" open-type="navigateBack" delta="0">完成</navigator> -->
+  <!-- <view class="finishBtn" bindtap="closeWindow">完成</view> -->
   <!--温馨提示-->
   <text class="tip">若礼物未领取，将在24小时之后退回至“我的礼物柜”中</text>
 </view>

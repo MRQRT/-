@@ -9,6 +9,11 @@ App({
   },
   onLaunch: function () {
     var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        // console.log(res.SDKVersion)
+      }
+    })
     // 登录
     wx.login({
       success: res => {
