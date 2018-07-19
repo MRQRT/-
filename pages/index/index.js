@@ -88,7 +88,7 @@ Page({
                               'source': app.globalData.source,
                             },
                             success: function(res){
-                              console.log(res)
+                              // console.log(res)
                               app.globalData.userId = res.data.content.id
                             }
                           })
@@ -114,9 +114,9 @@ Page({
     if(scene!='undefined'){
       app.globalData.source = scene
     }
-    console.log(app.globalData.source)
+    // console.log(app.globalData.source)
     var source = options
-    console.log(source)
+    // console.log(source)
     //wx.clearStorageSync() //测试时可以用此代码删掉手机小程序缓存
     var that=this;
     //请求产品列表

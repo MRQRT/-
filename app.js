@@ -57,7 +57,7 @@ App({
               'source': that.globalData.source,
             },
             success: function(res){
-              console.log(res)
+              // console.log(res)
               that.globalData.userId = res.data.content.id
               wx.setStorageSync('userId', res.data.content.id)
               typeof cb == "function" && cb(that.globalData.userInfo)

@@ -26,8 +26,8 @@ const randomString = len => {
 }
 
 const API = n => {
-  // return "https://api.aiyoujin.cn"
-  return "http://test.aiyoujin.cn"
+  return "https://api.aiyoujin.cn"
+  // return "http://test.aiyoujin.cn"
 }
 
 module.exports = {
